@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 
 @RestController
-@RequestMapping("/{text}")
+@RequestMapping("/common/{text}")
 public class TextTransformerController {
 
     private static final Logger logger = LoggerFactory.getLogger(TextTransformerController.class);
@@ -27,18 +27,9 @@ public class TextTransformerController {
         TextTransformer transformer = new TextTransformer(transforms);
 
 
-        AbstractInput test;
-        test = new TextInput();
-        test.setText(text);
 
-        test = new CapitalizeDecorator(test);
-        test = new CapitalizeDecorator(test);
-        test = new UpperDecorator(test);
-        test = new LowerDecorator(test);
-        test = new CapitalizeDecorator(test);
-//        return transformer.transform(text);
+        return transformer.transform(text);
 
-        return test.getText();
     }
 
     @RequestMapping(method = RequestMethod.POST, produces = "application/json")

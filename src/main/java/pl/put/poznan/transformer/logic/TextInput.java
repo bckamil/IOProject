@@ -2,9 +2,9 @@ package pl.put.poznan.transformer.logic;
 
 public class TextInput extends AbstractInput {
 
-    public TextInput()
+    public TextInput(String text)
     {
-
+        this.text = text;
     }
 
 }
