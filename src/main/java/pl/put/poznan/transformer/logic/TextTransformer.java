@@ -13,6 +13,9 @@ public class TextTransformer {
 
     public String transform(String text){
         // of course normally it would to something based on transforms
-        return text.toUpperCase();
+//        return text.toUpperCase();
+
+        return text;
     }
+
 }
