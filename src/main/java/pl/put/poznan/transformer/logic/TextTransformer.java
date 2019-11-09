@@ -1,6 +1,7 @@
 package pl.put.poznan.transformer.logic;
 
 import pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator;
+import pl.put.poznan.transformer.logic.decorators.DoubleDecorator;
 import pl.put.poznan.transformer.logic.decorators.LowerDecorator;
 import pl.put.poznan.transformer.logic.decorators.UpperDecorator;
 
@@ -34,6 +35,11 @@ public class TextTransformer {
 
     public String capitalTransform(){
         this.stringInput = new CapitalizeDecorator(stringInput);
+        return this.stringInput.getText();
+    }
+
+    public String doubleTransform(){
+        this.stringInput = new DoubleDecorator(stringInput);
         return this.stringInput.getText();
     }
 
