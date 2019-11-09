@@ -25,11 +25,8 @@ public class TextTransformerController {
 
         // do the transformation, you should run your logic here, below just a silly example
         TextTransformer transformer = new TextTransformer(transforms);
-        transformer.setStringInput(text);
 
-
-
-        return transformer.upperTransform();
+        return transformer.transform(text);
 
     }
 

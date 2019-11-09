@@ -1,5 +1,6 @@
 package pl.put.poznan.transformer.logic;
 
+
 import pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator;
 import pl.put.poznan.transformer.logic.decorators.DoubleDecorator;
 import pl.put.poznan.transformer.logic.decorators.LowerDecorator;
@@ -14,12 +15,10 @@ public class TextTransformer {
 
     private AbstractInput stringInput;
 
-
     public TextTransformer(String[] transforms){
         this.transforms = transforms;
     }
-
-    public void setStringInput(String text){
+    public void initializeInput(String text){
         this.stringInput = new TextInput(text);
     }
 
@@ -27,6 +26,7 @@ public class TextTransformer {
         this.stringInput = new UpperDecorator(stringInput);
         return this.stringInput.getText();
     }
+
 
     public String lowerTransform(){
         this.stringInput = new LowerDecorator(stringInput);
@@ -41,6 +41,7 @@ public class TextTransformer {
         this.stringInput = new DoubleDecorator(stringInput);
         return this.stringInput.getText();
     }
+
 
     public String transform(String text){
         // of course normally it would to something based on transforms
