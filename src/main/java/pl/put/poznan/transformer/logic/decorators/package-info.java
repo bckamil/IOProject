@@ -5,6 +5,7 @@
  * @author krystian
  * @author marek
  * @author mariusz
+ * @author kamil
  * 
  */
 package pl.put.poznan.transformer.logic.decorators;
