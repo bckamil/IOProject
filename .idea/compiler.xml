@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="io-project-architecture" />
+        <module name="ioprojectarchitecture" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ioprojectarchitecture" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
