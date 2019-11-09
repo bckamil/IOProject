@@ -1,6 +1,8 @@
 package pl.put.poznan.transformer.rest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.put.poznan.transformer.logic.*;
 import pl.put.poznan.transformer.logic.decorators.*;
@@ -10,13 +12,13 @@ import java.util.Arrays;
 
 
 @RestController
-@RequestMapping("/common/{text}")
+//@RequestMapping("/common/{text}")
 public class TextTransformerController {
 
     private static final Logger logger = LoggerFactory.getLogger(TextTransformerController.class);
 
-    @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public String get(@PathVariable String text,
+    @RequestMapping(value="/common/{text}", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity<?> get(@PathVariable String text,
                               @RequestParam(value="transforms", defaultValue="escape") String[] transforms) {
 
         // log the parameters
@@ -24,26 +26,26 @@ public class TextTransformerController {
         logger.debug(Arrays.toString(transforms));
 
         // do the transformation, you should run your logic here, below just a silly example
-        TextTransformer transformer = new TextTransformer(transforms);
-        transformer.setStringInput(text);
+        TextTransformer transformer = new TextTransformer(transforms, text);
         transformer.transform();
+        DataTemplateJSON dataTemplateJSON = new DataTemplateJSON(transforms, transformer.getInputText());
 
-        return transformer.getInputText();
+        return new ResponseEntity<DataTemplateJSON>(dataTemplateJSON, HttpStatus.OK);
 
     }
 
-    @RequestMapping(method = RequestMethod.POST, produces = "application/json")
-    public String post(@PathVariable String text,
-                      @RequestBody String[] transforms) {
+    @RequestMapping(value="/post", method = RequestMethod.POST)
+    public ResponseEntity<?> post(@RequestBody DataTemplateJSON dataTemplateJSON) {
 
-        // log the parameters
-        logger.debug(text);
-        logger.debug(Arrays.toString(transforms));
 
-        // do the transformation, you should run your logic here, below just a silly example
-        TextTransformer transformer = new TextTransformer(transforms);
-
-        return transformer.transform();
+        TextTransformer transformer = new TextTransformer(dataTemplateJSON.getTransforms(), dataTemplateJSON.getText());
+        transformer.transform();
+        dataTemplateJSON.setText(transformer.getInputText());
+//        // log the parameters
+//        logger.debug(text);
+//        logger.debug(Arrays.toString(transforms));
+//
+        return new ResponseEntity<DataTemplateJSON>(dataTemplateJSON, HttpStatus.OK);
     }
 
 

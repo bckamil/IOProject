@@ -14,10 +14,11 @@ public class TextTransformer {
 
     private AbstractInput stringInput;
 
-
-    public TextTransformer(String[] transforms) {
+    public TextTransformer(String[] transforms, String text ) {
         this.transforms = transforms;
+        this.stringInput = new TextInput(text);
     }
+
 
     public void setStringInput(String text) {
         this.stringInput = new TextInput(text);
@@ -74,6 +75,7 @@ public class TextTransformer {
         }
     return stringInput.getText();
     }
+
 }
 
 
