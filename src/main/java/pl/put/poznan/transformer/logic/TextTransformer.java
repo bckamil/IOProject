@@ -4,6 +4,7 @@ import pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator;
 import pl.put.poznan.transformer.logic.decorators.DoubleDecorator;
 import pl.put.poznan.transformer.logic.decorators.LowerDecorator;
 import pl.put.poznan.transformer.logic.decorators.UpperDecorator;
+import pl.put.poznan.transformer.logic.decorators.InverseDecorator;
 
 /**
  * This is just an example to show that the logic should be outside the REST service.
@@ -40,6 +41,11 @@ public class TextTransformer {
 
     public String doubleTransform(){
         this.stringInput = new DoubleDecorator(stringInput);
+        return this.stringInput.getText();
+    }
+    
+    public String inverseTransform(){
+        this.stringInput = new InverseDecorator(stringInput);
         return this.stringInput.getText();
     }
 
