@@ -29,7 +29,7 @@ public class TextTransformerController {
 
 
 
-        return transformer.upperTransform();
+        return transformer.inverseTransform();
 
     }
 
