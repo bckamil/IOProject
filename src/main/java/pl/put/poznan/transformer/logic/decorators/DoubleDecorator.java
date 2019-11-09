@@ -18,7 +18,7 @@ public class DoubleDecorator extends AbstractDecorator{
 
     @Override
     public String getText() {
-        String workString = inputText.toString();
+        String workString = inputText.getText();
         String[] splittedText = workString.split(" ");
         int textLen = splittedText.length;
         ArrayList<String> finalText = new ArrayList<>();

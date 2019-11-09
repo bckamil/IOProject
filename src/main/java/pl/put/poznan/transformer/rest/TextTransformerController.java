@@ -17,7 +17,7 @@ public class TextTransformerController {
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     public String get(@PathVariable String text,
-                              @RequestParam(value="transforms", defaultValue="upper,escape") String[] transforms) {
+                              @RequestParam(value="transforms", defaultValue="escape") String[] transforms) {
 
         // log the parameters
         logger.debug(text);
@@ -26,10 +26,9 @@ public class TextTransformerController {
         // do the transformation, you should run your logic here, below just a silly example
         TextTransformer transformer = new TextTransformer(transforms);
         transformer.setStringInput(text);
+        transformer.transform();
 
-
-
-        return transformer.upperTransform();
+        return transformer.getInputText();
 
     }
 
@@ -44,7 +43,7 @@ public class TextTransformerController {
         // do the transformation, you should run your logic here, below just a silly example
         TextTransformer transformer = new TextTransformer(transforms);
 
-        return transformer.transform(text);
+        return transformer.transform();
     }
 
 

@@ -15,39 +15,65 @@ public class TextTransformer {
     private AbstractInput stringInput;
 
 
-    public TextTransformer(String[] transforms){
+    public TextTransformer(String[] transforms) {
         this.transforms = transforms;
     }
 
-    public void setStringInput(String text){
+    public void setStringInput(String text) {
         this.stringInput = new TextInput(text);
     }
 
-    public String upperTransform(){
+    public String upperTransform() {
         this.stringInput = new UpperDecorator(stringInput);
         return this.stringInput.getText();
     }
 
-    public String lowerTransform(){
+    public String lowerTransform() {
         this.stringInput = new LowerDecorator(stringInput);
         return this.stringInput.getText();
     }
 
-    public String capitalTransform(){
+    public String capitalTransform() {
         this.stringInput = new CapitalizeDecorator(stringInput);
         return this.stringInput.getText();
     }
 
-    public String doubleTransform(){
+    public String doubleTransform() {
         this.stringInput = new DoubleDecorator(stringInput);
         return this.stringInput.getText();
     }
 
-    public String transform(String text){
-        // of course normally it would to something based on transforms
-//        return text.toUpperCase();
-
-        return text;
+    public String getInputText() {
+        return stringInput.getText();
     }
 
+    public String transform() {
+        for (String transform : transforms) {
+            switch (transform) {
+                case "upper": {
+                    upperTransform();
+                    break;
+                }
+                case "lower": {
+                    lowerTransform();
+                    break;
+                }
+                case "capital": {
+                    capitalTransform();
+                    break;
+                }
+                case "deldouble": {
+                    doubleTransform();
+                    break;
+                }
+
+                default: {
+                    break;
+                }
+            }
+        }
+    return stringInput.getText();
+    }
 }
+
+
