@@ -30,8 +30,10 @@ public class TextTransformerController {
         transformer.transform();
         DataTemplateJSON dataTemplateJSON = new DataTemplateJSON(transforms, transformer.getInputText());
 
+
         return new ResponseEntity<DataTemplateJSON>(dataTemplateJSON, HttpStatus.OK);
 
+        // return transformer.inverseTransform();
     }
 
     @RequestMapping(value="/post", method = RequestMethod.POST)
