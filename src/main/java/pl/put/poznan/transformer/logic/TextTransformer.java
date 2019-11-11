@@ -7,7 +7,13 @@ import pl.put.poznan.transformer.logic.decorators.UpperDecorator;
 import pl.put.poznan.transformer.logic.decorators.InverseDecorator;
 
 /**
- * This is just an example to show that the logic should be outside the REST service.
+ * This class manage text transforms
+ *
+ * @author krystian
+ * @author marek
+ * @author mariusz
+ * @author kamil
+ *
  */
 public class TextTransformer {
 
@@ -54,6 +60,11 @@ public class TextTransformer {
         return stringInput.getText();
     }
 
+    /**
+     * Function to chose method to execute and to transform text by dynamical type assign
+     *
+     * @return  String transformed text
+     */
     public String transform() {
         for (String transform : transforms) {
             switch (transform) {
@@ -71,6 +82,11 @@ public class TextTransformer {
                 }
                 case "deldouble": {
                     doubleTransform();
+                    break;
+                }
+                case "inverse":
+                {
+                    inverseTransform();
                     break;
                 }
 
