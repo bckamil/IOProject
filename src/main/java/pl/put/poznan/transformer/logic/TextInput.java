@@ -13,7 +13,7 @@ public class TextInput extends AbstractInput {
 
     /**
      * Constructor
-     * @param text
+     * @param text This class store text
      */
     public TextInput(String text)
     {
