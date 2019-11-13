@@ -37,12 +37,12 @@ public class DoubleDecorator extends AbstractDecorator{
      */
     @Override
     public String getText() {
-        String workString = inputText.toString();
+        String workString = inputText.getText();
         String[] splittedText = workString.split(" ");
         int textLen = splittedText.length;
         ArrayList<String> finalText = new ArrayList<>();
         finalText.add(splittedText[0]);
-        for(int i=1; i<textLen-1;i++)
+        for(int i=1; i<textLen;i++)
         {
             if (splittedText[i-1].equals(splittedText[i])){continue;}
             else{finalText.add(splittedText[i]);}

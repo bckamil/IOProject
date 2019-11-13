@@ -24,13 +24,13 @@ public class TextTransformerController {
         logger.debug(Arrays.toString(transforms));
 
         // do the transformation, you should run your logic here, below just a silly example
-        TextTransformer transformer = new TextTransformer(transforms);
+        TextTransformer transformer = new TextTransformer(transforms, text);
 
 
 
 
 
-        return transformer.transform(text);
+        return transformer.transform();
 
     }
 
@@ -43,9 +43,9 @@ public class TextTransformerController {
         logger.debug(Arrays.toString(transforms));
 
         // do the transformation, you should run your logic here, below just a silly example
-        TextTransformer transformer = new TextTransformer(transforms);
+        TextTransformer transformer = new TextTransformer(transforms, text);
 
-        return transformer.transform(text);
+        return transformer.transform();
     }
 
 
