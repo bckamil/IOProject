@@ -1,19 +1,12 @@
 package pl.put.poznan.transformer.logic;
 
-import pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator;
-import pl.put.poznan.transformer.logic.decorators.DoubleDecorator;
-import pl.put.poznan.transformer.logic.decorators.LowerDecorator;
+
+
+import pl.put.poznan.transformer.logic.decorators.*;
 import pl.put.poznan.transformer.logic.decorators.UpperDecorator;
-import pl.put.poznan.transformer.logic.decorators.InverseDecorator;
 
 /**
- * This class manage text transforms
- *
- * @author krystian
- * @author marek
- * @author mariusz
- * @author kamil
- *
+ * This is just an example to show that the logic should be outside the REST service.
  */
 public class TextTransformer {
 
@@ -50,9 +43,8 @@ public class TextTransformer {
         this.stringInput = new DoubleDecorator(stringInput);
         return this.stringInput.getText();
     }
-    
-    public String inverseTransform(){
-        this.stringInput = new InverseDecorator(stringInput);
+    public String numberTransform(){
+        this.stringInput = new NumericalDecorator(stringInput);
         return this.stringInput.getText();
     }
 
@@ -60,11 +52,6 @@ public class TextTransformer {
         return stringInput.getText();
     }
 
-    /**
-     * Function to chose method to execute and to transform text by dynamical type assign
-     *
-     * @return  String transformed text
-     */
     public String transform() {
         for (String transform : transforms) {
             switch (transform) {
@@ -84,9 +71,8 @@ public class TextTransformer {
                     doubleTransform();
                     break;
                 }
-                case "inverse":
-                {
-                    inverseTransform();
+                case "number":{
+                    numberTransform();
                     break;
                 }
 
@@ -95,9 +81,7 @@ public class TextTransformer {
                 }
             }
         }
-    return stringInput.getText();
+        return stringInput.getText();
     }
 
 }
-
-

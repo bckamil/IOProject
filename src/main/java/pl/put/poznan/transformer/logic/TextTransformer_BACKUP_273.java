@@ -1,8 +1,14 @@
 package pl.put.poznan.transformer.logic;
 
+<<<<<<< HEAD
+
+
+import pl.put.poznan.transformer.logic.decorators.*;
+=======
 import pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator;
 import pl.put.poznan.transformer.logic.decorators.DoubleDecorator;
 import pl.put.poznan.transformer.logic.decorators.LowerDecorator;
+>>>>>>> master
 import pl.put.poznan.transformer.logic.decorators.UpperDecorator;
 import pl.put.poznan.transformer.logic.decorators.InverseDecorator;
 
@@ -50,9 +56,14 @@ public class TextTransformer {
         this.stringInput = new DoubleDecorator(stringInput);
         return this.stringInput.getText();
     }
+<<<<<<< HEAD
+    public String numberTransform(){
+        this.stringInput = new NumericalDecorator(stringInput);
+=======
     
     public String inverseTransform(){
         this.stringInput = new InverseDecorator(stringInput);
+>>>>>>> master
         return this.stringInput.getText();
     }
 
@@ -60,11 +71,14 @@ public class TextTransformer {
         return stringInput.getText();
     }
 
+<<<<<<< HEAD
+=======
     /**
      * Function to chose method to execute and to transform text by dynamical type assign
      *
      * @return  String transformed text
      */
+>>>>>>> master
     public String transform() {
         for (String transform : transforms) {
             switch (transform) {
@@ -84,9 +98,14 @@ public class TextTransformer {
                     doubleTransform();
                     break;
                 }
+<<<<<<< HEAD
+                case "number":{
+                    numberTransform();
+=======
                 case "inverse":
                 {
                     inverseTransform();
+>>>>>>> master
                     break;
                 }
 
@@ -95,7 +114,11 @@ public class TextTransformer {
                 }
             }
         }
+<<<<<<< HEAD
+        return stringInput.getText();
+=======
     return stringInput.getText();
+>>>>>>> master
     }
 
 }
