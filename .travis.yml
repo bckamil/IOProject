@@ -1,2 +1,2 @@
 language: Java
-script: mvn clean install -Dmaven.javadoc.skip=false
+script: mvn package
