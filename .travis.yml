@@ -6,7 +6,6 @@ deploy:
   github_token: "$GITHUB_TOKEN"
   api_key:
     secure: "$GITHUB_TOKEN"
-  file: "/home/travis/build/bckamil/IOProject/target/*"
   skip_cleanup: true
   file_glob: true
   on:
