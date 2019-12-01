@@ -7,7 +7,7 @@ import pl.put.poznan.transformer.logic.AbstractInput;
  *  It takes any object that inherit from AbstractInput class,
  *  and modify its previous method getText() to transform text characters to inverse case
  *
- * zmienia kolejnosc znakow zachowujac ich wielkosc na konkretnych miejscach MirEk -> KerIm
+ * zmienia kolejnosc znakow zachowujac ich wielkosc na konkretnych miejscach MirEk zmienia na KerIm
  *
  * @author mariusz
  * @see pl.put.poznan.transformer.logic.decorators.AbstractDecorator

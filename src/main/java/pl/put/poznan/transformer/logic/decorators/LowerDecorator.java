@@ -7,7 +7,7 @@ import pl.put.poznan.transformer.logic.AbstractInput;
  * It takes any object that inherit from AbstractInput class,
  * and modify its previous method getText() to transform text characters to lower case
  *
- * Wszystkie litery na małe: Lower -> lower
+ * Wszystkie litery na małe: Lower zmienia na lower
  *
  * @author marek
  * @see pl.put.poznan.transformer.logic.decorators.AbstractDecorator

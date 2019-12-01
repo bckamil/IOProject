@@ -5,7 +5,7 @@ import pl.put.poznan.transformer.logic.AbstractInput;
 /**
  * CapitalizeDecorator transform text to capitalize firs char of any word in text
  * <p>
- * Pierwsza litera w każdym wyrazie na wielką: capitalize text -> Capitalize Text
+ * Pierwsza litera w każdym wyrazie na wielką: capitalize text zmienia na Capitalize Text
  *
  * @author marek
  * @see pl.put.poznan.transformer.logic.decorators.AbstractDecorator
@@ -28,7 +28,7 @@ public class CapitalizeDecorator extends AbstractDecorator {
     /**
      * Override getText() method
      * <p>
-     * ex. capitalize text -> Capitalize Text
+     * ex. capitalize text - Capitalize Text
      *
      * @return Returns base text but every word starts with capital letter
      */
