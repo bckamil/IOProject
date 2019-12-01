@@ -4,7 +4,9 @@ deploy:
   provider: releases
   skip_cleanup: true
   github_token: "$GITHUB_TOKEN"
-  file: "/home/travis/build/bckamil/IOProject/target/"
+  api_key:
+    secure: "$GITHUB_TOKEN"
+  file: "/home/travis/build/bckamil/IOProject/target/*"
   skip_cleanup: true
   file_glob: true
   on:
