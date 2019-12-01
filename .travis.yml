@@ -1,10 +1,12 @@
 language: Java
 script: mvn package
-
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  github_token: "$GITHUB_TOKEN"
   keep_history: true
   on:
     branch: master
+env:
+  global:
+    secure: MS//Z9AGGV311Xxv5fF6+iTkwFrhfQPTOY65YcqBQ76DKE8b7HpwcNmdazn67QDmiv7k7moeYPStoE5x9hlnhC4OfE/KwsbQv1nAH/lkwVa2NMCLoAwmE0K0Y5DEsNFnGhm9rL9EcPs46Yjc3C6Op6pGleSS+H3ATyRawOqvZxHN5vqhwEPo1pplvkFJSTnqOza1QIxouNolJQ4jdjF9qIWfNmvjCrFdl0p/7S1GgtC4OF68/B5AYOj6ailU2hmLcwPMZMQ93pk+vPzRI00G1EiZ6xrSjwZ7P9ztDstlJ2sAsYd3s1q4KfCJ1H4iytL4vST1RVJf2x2etRkQnhjsTWMpZa/isBG+r1bC4KiVz49t1awaiK/XcjqDX/6DsPh/inRgRryMYFqxiUC++MqDyaBJoiZ20EpYCgCK6BO7E0lyjb3vk/wRizVlFPJ2XaJaGv16JZ3xP1+0s+qgSGxbSS687OSh0hbR6Vs3/7LHLR3b0P6XheTY3xMiFWI7tcBWSsWnkk+6L2XSCry7H6moL7+S5rglx+YXYr565RUONu1hmjntCR4XYIRP0AZep6k0hKv+jhUkNpaebdENGcZDFl+FHPlZrbUtML76qVIZzydghUC4d3VUNVNmPEK/x35e27BrV0CjcAFJSMwdwGajAu3U4YxswbtiA7/kyfvauCY=
