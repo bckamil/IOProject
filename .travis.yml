@@ -1,10 +1,12 @@
 language: Java
 script: mvn package
 deploy:
-  provider: pages
+  provider: releases
   skip_cleanup: true
   github_token: "$GITHUB_TOKEN"
-  keep_history: true
+  file: "/home/travis/build/bckamil/IOProject/target/"
+  skip_cleanup: true
+  file_glob: true
   on:
     branch: master
 env:
