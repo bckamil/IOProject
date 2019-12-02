@@ -21,7 +21,6 @@ public class NumericalDecorator extends AbstractDecorator{
     {
         String workString = inputText.getText();
         boolean numericNo = true;
-        System.out.println(workString);
         String[] splittedText = workString.split(" ");
         ArrayList<String> finalText = new ArrayList<>();
         for (String temp : splittedText)
