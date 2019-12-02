@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>pl.put.poznan.transformer</OriginalElement>
+  <nodes>
+    <node x="817.8333333333331" y="424.5">pl.put.poznan.transformer.logic.decorators.LowerDecorator</node>
+    <node x="583.8333333333331" y="424.5">pl.put.poznan.transformer.logic.decorators.DoubleDecorator</node>
+    <node x="0.0" y="1072.0">pl.put.poznan.transformer.app.TextTransformerApplication</node>
+    <node x="1045.833333333333" y="424.5">pl.put.poznan.transformer.logic.decorators.InverseDecorator</node>
+    <node x="697.3333333333331" y="174.0">pl.put.poznan.transformer.logic.decorators.AbstractDecorator</node>
+    <node x="1278.8333333333333" y="369.0">pl.put.poznan.transformer.logic.decorators.NumericalDecorator</node>
+    <node x="108.83333333333326" y="424.5">pl.put.poznan.transformer.logic.decorators.UpperDecorator</node>
+    <node x="340.1111111111111" y="656.0">pl.put.poznan.transformer.logic.DataTemplateJSON</node>
+    <node x="439.2361111111111" y="933.0">pl.put.poznan.transformer.rest.TextTransformerController</node>
+    <node x="0.0" y="197.0">pl.put.poznan.transformer.logic.TextInput</node>
+    <node x="336.8333333333332" y="424.5">pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator</node>
+    <node x="590.1111111111111" y="612.0">pl.put.poznan.transformer.logic.TextTransformer</node>
+    <node x="735.8333333333331" y="0.0">pl.put.poznan.transformer.logic.AbstractInput</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="pl.put.poznan.transformer.logic.decorators.InverseDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
+      <point x="0.0" y="-36.0" />
+      <point x="1152.333333333333" y="319.0" />
+      <point x="871.4999999999998" y="319.0" />
+      <point x="64.16666666666663" y="47.5" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.TextTransformer" target="pl.put.poznan.transformer.logic.AbstractInput">
+      <point x="92.14285714285711" y="-135.5" />
+      <point x="789.7539682539682" y="592.0" />
+      <point x="1520.3333333333333" y="592.0" />
+      <point x="1520.3333333333333" y="114.0" />
+      <point x="872.3333333333331" y="114.0" />
+      <point x="65.0" y="47.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.TextTransformer" target="pl.put.poznan.transformer.logic.TextInput">
+      <point x="-92.14285714285711" y="-135.5" />
+      <point x="605.468253968254" y="592.0" />
+      <point x="66.5" y="592.0" />
+      <point x="0.0" y="24.5" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.TextTransformer" target="pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator">
+      <point x="-30.714285714285666" y="-135.5" />
+      <point x="666.8968253968254" y="572.0" />
+      <point x="450.3333333333332" y="572.0" />
+      <point x="0.0" y="36.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.TextTransformer" target="pl.put.poznan.transformer.logic.decorators.UpperDecorator">
+      <point x="-61.428571428571445" y="-135.5" />
+      <point x="636.1825396825396" y="582.0" />
+      <point x="212.83333333333326" y="582.0" />
+      <point x="0.0" y="36.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.LowerDecorator" target="pl.put.poznan.transformer.logic.AbstractInput">
+      <point x="69.33333333333337" y="-36.0" />
+      <point x="991.1666666666665" y="349.0" />
+      <point x="977.4999999999999" y="349.0" />
+      <point x="977.4999999999999" y="144.0" />
+      <point x="833.3333333333331" y="144.0" />
+      <point x="26.0" y="47.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.UpperDecorator" target="pl.put.poznan.transformer.logic.AbstractInput">
+      <point x="-69.33333333333326" y="-36.0" />
+      <point x="143.5" y="289.0" />
+      <point x="307.31320861678" y="289.0" />
+      <point x="307.31320861678" y="124.0" />
+      <point x="755.3333333333331" y="124.0" />
+      <point x="-52.0" y="47.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.LowerDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
+      <point x="0.0" y="-36.0" />
+      <point x="921.8333333333331" y="339.0" />
+      <point x="834.8333333333331" y="339.0" />
+      <point x="27.5" y="47.5" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.UpperDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
+      <point x="69.33333333333337" y="-36.0" />
+      <point x="282.16666666666663" y="309.0" />
+      <point x="724.8333333333331" y="309.0" />
+      <point x="-82.5" y="47.5" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.rest.TextTransformerController" target="pl.put.poznan.transformer.logic.DataTemplateJSON">
+      <point x="-104.25" y="-47.0" />
+      <point x="473.9861111111111" y="908.0" />
+      <point x="397.6111111111111" y="908.0" />
+      <point x="-57.5" y="91.5" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator" target="pl.put.poznan.transformer.logic.AbstractInput">
+      <point x="-75.66666666666674" y="-36.0" />
+      <point x="374.66666666666646" y="289.0" />
+      <point x="428.39654195011326" y="289.0" />
+      <point x="428.39654195011326" y="134.0" />
+      <point x="768.3333333333331" y="134.0" />
+      <point x="-39.0" y="47.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.DoubleDecorator" target="pl.put.poznan.transformer.logic.AbstractInput">
+      <point x="-71.33333333333331" y="-36.0" />
+      <point x="619.4999999999999" y="289.0" />
+      <point x="635.1666666666665" y="289.0" />
+      <point x="635.1666666666665" y="144.0" />
+      <point x="781.3333333333331" y="144.0" />
+      <point x="-26.0" y="47.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.NumericalDecorator" target="pl.put.poznan.transformer.logic.AbstractInput">
+      <point x="77.0" y="-91.5" />
+      <point x="1471.3333333333333" y="289.0" />
+      <point x="1347.1312358276643" y="289.0" />
+      <point x="1347.1312358276643" y="124.0" />
+      <point x="859.3333333333331" y="124.0" />
+      <point x="52.0" y="47.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.TextInput" target="pl.put.poznan.transformer.logic.AbstractInput">
+      <point x="0.0" y="-24.5" />
+      <point x="66.5" y="114.0" />
+      <point x="742.3333333333331" y="114.0" />
+      <point x="-65.0" y="47.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.AbstractDecorator" target="pl.put.poznan.transformer.logic.AbstractInput">
+      <point x="0.0" y="-47.5" />
+      <point x="0.0" y="47.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.TextTransformer" target="pl.put.poznan.transformer.logic.decorators.InverseDecorator">
+      <point x="61.428571428571445" y="-135.5" />
+      <point x="759.0396825396825" y="582.0" />
+      <point x="1152.333333333333" y="582.0" />
+      <point x="0.0" y="36.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.InverseDecorator" target="pl.put.poznan.transformer.logic.AbstractInput">
+      <point x="71.0" y="-36.0" />
+      <point x="1223.333333333333" y="349.0" />
+      <point x="1217.6312358276643" y="349.0" />
+      <point x="1217.6312358276643" y="134.0" />
+      <point x="846.3333333333331" y="134.0" />
+      <point x="39.0" y="47.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.rest.TextTransformerController" target="pl.put.poznan.transformer.logic.TextTransformer">
+      <point x="104.25" y="-47.0" />
+      <point x="682.4861111111111" y="908.0" />
+      <point x="751.3611111111111" y="908.0" />
+      <point x="53.75" y="135.5" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.TextTransformer" target="pl.put.poznan.transformer.logic.decorators.LowerDecorator">
+      <point x="30.71428571428578" y="-135.5" />
+      <point x="728.3253968253969" y="572.0" />
+      <point x="921.8333333333331" y="572.0" />
+      <point x="0.0" y="36.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.TextTransformer" target="pl.put.poznan.transformer.logic.decorators.DoubleDecorator">
+      <point x="0.0" y="-135.5" />
+      <point x="697.6111111111111" y="592.0" />
+      <point x="690.8333333333331" y="592.0" />
+      <point x="0.0" y="36.0" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.NumericalDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
+      <point x="0.0" y="-91.5" />
+      <point x="1394.3333333333333" y="299.0" />
+      <point x="908.1666666666664" y="299.0" />
+      <point x="100.83333333333326" y="47.5" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.DoubleDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
+      <point x="0.0" y="-36.0" />
+      <point x="690.8333333333331" y="339.0" />
+      <point x="779.8333333333331" y="339.0" />
+      <point x="-27.5" y="47.5" />
+    </edge>
+    <edge source="pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
+      <point x="75.66666666666674" y="-36.0" />
+      <point x="526.0" y="329.0" />
+      <point x="761.4999999999998" y="329.0" />
+      <point x="-45.83333333333337" y="47.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="859.0000000000002" y="596.4444444444445" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
