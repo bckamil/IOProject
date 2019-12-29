@@ -14,8 +14,6 @@ import java.util.ArrayList;
  *
  *
  */
-
-
 public class FoldDecorator extends AbstractDecorator {
 
 
@@ -31,7 +29,7 @@ public class FoldDecorator extends AbstractDecorator {
 
 
     /**
-     * Constructor of LowerDecorator
+     * Constructor of FoldDecorator
      * It takes any object that inherit from AbstractInput class,
      * and modify its previous method getText()
      *

@@ -56,6 +56,10 @@ public class TextTransformer {
         this.stringInput = new FoldDecorator(stringInput);
         return this.stringInput.getText();
     }
+    public String unfoldTransform(){
+        this.stringInput = new UnfoldDecorator(stringInput);
+        return this.stringInput.getText();
+    }
 
     public String getInputText() {
         return stringInput.getText();
@@ -93,6 +97,11 @@ public class TextTransformer {
                 case "fold":
                 {
                     foldTransform();
+                    break;
+                }
+                case "unfold":
+                {
+                    unfoldTransform();
                     break;
                 }
 
