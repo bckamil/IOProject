@@ -1,10 +1,6 @@
 package pl.put.poznan.transformer.logic;
 
-import pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator;
-import pl.put.poznan.transformer.logic.decorators.DoubleDecorator;
-import pl.put.poznan.transformer.logic.decorators.LowerDecorator;
-import pl.put.poznan.transformer.logic.decorators.UpperDecorator;
-import pl.put.poznan.transformer.logic.decorators.InverseDecorator;
+import pl.put.poznan.transformer.logic.decorators.*;
 
 /**
  * This class manage text transforms
@@ -56,6 +52,11 @@ public class TextTransformer {
         return this.stringInput.getText();
     }
 
+    public String foldTransform(){
+        this.stringInput = new FoldDecorator(stringInput);
+        return this.stringInput.getText();
+    }
+
     public String getInputText() {
         return stringInput.getText();
     }
@@ -87,6 +88,11 @@ public class TextTransformer {
                 case "inverse":
                 {
                     inverseTransform();
+                    break;
+                }
+                case "fold":
+                {
+                    foldTransform();
                     break;
                 }
 
