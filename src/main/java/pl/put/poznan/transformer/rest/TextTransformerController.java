@@ -31,17 +31,22 @@ public class TextTransformerController {
      */
     @RequestMapping(value="/common/{text}", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<?> get(@PathVariable String text,
-                              @RequestParam(value="transforms", defaultValue="escape") String[] transforms) {
+                              @RequestParam(value="transforms", defaultValue="inverse") String[] transforms) {
 
         // log the parameters
+        logger.info("Input");
         logger.debug(text);
+        logger.info("Operation");
         logger.debug(Arrays.toString(transforms));
 
         // do the transformation, you should run your logic here, below just a silly example
         TextTransformer transformer = new TextTransformer(transforms, text);
         transformer.transform();
         DataTemplateJSON dataTemplateJSON = new DataTemplateJSON(transforms, transformer.getInputText());
-
+        
+        //log the output
+        logger.info("Output");
+        logger.debug(transformer.getInputText());
 
         return new ResponseEntity<DataTemplateJSON>(dataTemplateJSON, HttpStatus.OK);
 
@@ -61,12 +66,18 @@ public class TextTransformerController {
 
 
         //log the parameters
+        logger.info("Input");
         logger.debug(dataTemplateJSON.getText());
+        logger.info("Operation");
         logger.debug(Arrays.toString(dataTemplateJSON.getTransforms()));
 
         TextTransformer transformer = new TextTransformer(dataTemplateJSON.getTransforms(), dataTemplateJSON.getText());
         transformer.transform();
         dataTemplateJSON.setText(transformer.getInputText());
+        
+        //log the output
+        logger.info("Output");
+        logger.debug(transformer.getInputText());
 
         return new ResponseEntity<DataTemplateJSON>(dataTemplateJSON, HttpStatus.OK);
     }

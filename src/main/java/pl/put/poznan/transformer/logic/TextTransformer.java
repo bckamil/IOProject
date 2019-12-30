@@ -51,6 +51,10 @@ public class TextTransformer {
         this.stringInput = new InverseDecorator(stringInput);
         return this.stringInput.getText();
     }
+    public String numberTransform(){
+        this.stringInput = new NumericalDecorator(stringInput);
+        return this.stringInput.getText();
+    }
 
     public String foldTransform(){
         this.stringInput = new FoldDecorator(stringInput);
@@ -102,6 +106,11 @@ public class TextTransformer {
                 case "unfold":
                 {
                     unfoldTransform();
+                    break;
+                }
+                case "number":
+                {
+                    numberTransform();
                     break;
                 }
 
