@@ -5,7 +5,7 @@ import pl.put.poznan.transformer.logic.AbstractInput;
 /**
  * UnfoldDecorator
  *
- * Replace some pre-implemented text values into another -> short versions to full long
+ * Replace some pre-implemented text values into another : short versions to full long
  *
  * @author marek
  * @see pl.put.poznan.transformer.logic.decorators.AbstractDecorator

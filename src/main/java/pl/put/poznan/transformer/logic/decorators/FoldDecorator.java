@@ -2,12 +2,12 @@ package pl.put.poznan.transformer.logic.decorators;
 
 
 import pl.put.poznan.transformer.logic.AbstractInput;
-import java.util.ArrayList;
+
 
 /**
  * FoldDecorator
  *
- * Replace some pre-implemented text values into another -> long veriosns to shortcut.
+ * Replace some pre-implemented text values into another : long veriosns to shortcut.
  *
  * @author marek
  * @see pl.put.poznan.transformer.logic.decorators.AbstractDecorator
@@ -53,7 +53,7 @@ public class FoldDecorator extends AbstractDecorator {
         String tempText = inputText.getText();
         String textCopy = tempText.toLowerCase();
 
-        for (int counter = 0; counter<3; counter++) {
+        for (int counter = 0; counter < 3; counter++) {
             int i = 0;
             while (true) {
                 int index = textCopy.indexOf(sentences[counter], i);
