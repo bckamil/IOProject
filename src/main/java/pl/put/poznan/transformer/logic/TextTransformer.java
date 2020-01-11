@@ -64,6 +64,10 @@ public class TextTransformer {
         this.stringInput = new UnfoldDecorator(stringInput);
         return this.stringInput.getText();
     }
+    public String latexTransform(){
+        this.stringInput = new LatexDecorator(stringInput);
+        return this.stringInput.getText();
+    }
 
     public String getInputText() {
         return stringInput.getText();
@@ -111,6 +115,11 @@ public class TextTransformer {
                 case "number":
                 {
                     numberTransform();
+                    break;
+                }
+                case "latex":
+                {
+                    latexTransform();
                     break;
                 }
 
