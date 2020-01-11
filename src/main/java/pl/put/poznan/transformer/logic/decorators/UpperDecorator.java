@@ -7,7 +7,7 @@ import pl.put.poznan.transformer.logic.AbstractInput;
  *  It takes any object that inherit from AbstractInput class,
  *  and modify its previous method getText() to transform text characters to upper case
  *
- * wszystkie litery na wielkie: upper -> UPPER
+ * wszystkie litery na wielkie: upper zmienia na UPPER
  *
  * @author marek
  * @see pl.put.poznan.transformer.logic.decorators.AbstractDecorator

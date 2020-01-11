@@ -6,7 +6,7 @@
 
     <groupId>pl.put.poznan</groupId>
     <artifactId>io-project-architecture</artifactId>
-    <version>0.1</version>
+    <version>1.4</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -54,6 +54,11 @@
                    </execution>
                </executions>
            </plugin>
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-javadoc-plugin</artifactId>
+               <version>3.1.1</version>
+            </plugin>
         </plugins>
     </build>
 
@@ -69,6 +74,4 @@
             <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
     </pluginRepositories>
-
-
 </project>

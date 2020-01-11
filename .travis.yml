@@ -1,1 +1,2 @@
 language: Java
+script: mvn package
