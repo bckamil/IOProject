@@ -3,72 +3,72 @@
   <ID>JAVA</ID>
   <OriginalElement>pl.put.poznan.transformer</OriginalElement>
   <nodes>
-    <node x="0.0" y="354.5">pl.put.poznan.transformer.logic.decorators.LowerDecorator</node>
-    <node x="707.0" y="354.5">pl.put.poznan.transformer.logic.decorators.DoubleDecorator</node>
+    <node x="0.0" y="354.5">pl.put.poznan.transformer.logic.decorators.DoubleDecorator</node>
+    <node x="970.0" y="354.5">pl.put.poznan.transformer.logic.decorators.LowerDecorator</node>
     <node x="876.0" y="527.0">pl.put.poznan.transformer.app.TextTransformerApplication</node>
-    <node x="468.0" y="354.5">pl.put.poznan.transformer.logic.decorators.InverseDecorator</node>
-    <node x="584.25" y="144.0">pl.put.poznan.transformer.logic.decorators.AbstractDecorator</node>
-    <node x="947.0" y="299.0">pl.put.poznan.transformer.logic.decorators.NumericalDecorator</node>
-    <node x="234.0" y="354.5">pl.put.poznan.transformer.logic.decorators.UpperDecorator</node>
+    <node x="240.0" y="354.5">pl.put.poznan.transformer.logic.decorators.InverseDecorator</node>
+    <node x="607.25" y="144.0">pl.put.poznan.transformer.logic.decorators.AbstractDecorator</node>
+    <node x="479.0" y="299.0">pl.put.poznan.transformer.logic.decorators.NumericalDecorator</node>
+    <node x="736.0" y="354.5">pl.put.poznan.transformer.logic.decorators.UpperDecorator</node>
     <node x="266.0" y="527.0">pl.put.poznan.transformer.logic.DataTemplateJSON</node>
     <node x="547.0" y="527.0">pl.put.poznan.transformer.rest.TextTransformerController</node>
-    <node x="830.25" y="167.0">pl.put.poznan.transformer.logic.TextInput</node>
+    <node x="853.25" y="167.0">pl.put.poznan.transformer.logic.TextInput</node>
     <node x="1204.0" y="354.5">pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator</node>
     <node x="0.0" y="527.0">pl.put.poznan.transformer.logic.TextTransformer</node>
-    <node x="724.0" y="0.0">pl.put.poznan.transformer.logic.AbstractInput</node>
+    <node x="747.0" y="0.0">pl.put.poznan.transformer.logic.AbstractInput</node>
   </nodes>
   <notes />
   <edges>
     <edge source="pl.put.poznan.transformer.logic.decorators.InverseDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
       <point x="0.0" y="-36.0" />
-      <point x="577.5" y="279.0" />
-      <point x="678.4166666666666" y="279.0" />
-      <point x="-18.83333333333337" y="47.5" />
+      <point x="349.5" y="269.0" />
+      <point x="663.75" y="269.0" />
+      <point x="-56.5" y="47.5" />
     </edge>
     <edge source="pl.put.poznan.transformer.logic.decorators.LowerDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
       <point x="0.0" y="-36.0" />
-      <point x="107.0" y="259.0" />
-      <point x="603.0833333333334" y="259.0" />
-      <point x="-94.16666666666663" y="47.5" />
+      <point x="1077.0" y="269.0" />
+      <point x="776.75" y="269.0" />
+      <point x="56.5" y="47.5" />
     </edge>
     <edge source="pl.put.poznan.transformer.logic.decorators.UpperDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
       <point x="0.0" y="-36.0" />
-      <point x="341.0" y="269.0" />
-      <point x="640.75" y="269.0" />
-      <point x="-56.5" y="47.5" />
+      <point x="843.0" y="279.0" />
+      <point x="739.0833333333334" y="279.0" />
+      <point x="18.83333333333337" y="47.5" />
     </edge>
     <edge source="pl.put.poznan.transformer.logic.decorators.NumericalDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
       <point x="0.0" y="-91.5" />
-      <point x="1065.5" y="269.0" />
-      <point x="753.75" y="269.0" />
-      <point x="56.5" y="47.5" />
+      <point x="597.5" y="279.0" />
+      <point x="701.4166666666666" y="279.0" />
+      <point x="-18.83333333333337" y="47.5" />
     </edge>
     <edge source="pl.put.poznan.transformer.logic.decorators.DoubleDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
       <point x="0.0" y="-36.0" />
-      <point x="817.0" y="279.0" />
-      <point x="716.0833333333334" y="279.0" />
-      <point x="18.83333333333337" y="47.5" />
+      <point x="110.0" y="259.0" />
+      <point x="626.0833333333334" y="259.0" />
+      <point x="-94.16666666666663" y="47.5" />
     </edge>
     <edge source="pl.put.poznan.transformer.logic.decorators.CapitalizeDecorator" target="pl.put.poznan.transformer.logic.decorators.AbstractDecorator">
       <point x="0.0" y="-36.0" />
       <point x="1320.5" y="259.0" />
-      <point x="791.4166666666666" y="259.0" />
+      <point x="814.4166666666666" y="259.0" />
       <point x="94.16666666666663" y="47.5" />
     </edge>
     <edge source="pl.put.poznan.transformer.logic.decorators.AbstractDecorator" target="pl.put.poznan.transformer.logic.AbstractInput">
       <point x="0.0" y="-47.5" />
-      <point x="697.25" y="119.0" />
-      <point x="761.25" y="119.0" />
+      <point x="720.25" y="119.0" />
+      <point x="784.25" y="119.0" />
       <point x="-37.25" y="47.0" />
     </edge>
     <edge source="pl.put.poznan.transformer.logic.TextInput" target="pl.put.poznan.transformer.logic.AbstractInput">
       <point x="0.0" y="-24.5" />
-      <point x="899.75" y="119.0" />
-      <point x="835.75" y="119.0" />
+      <point x="922.75" y="119.0" />
+      <point x="858.75" y="119.0" />
       <point x="37.25" y="47.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="741.0" y="436.0" />
+  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="739.0" y="436.0" />
   <SelectedNodes />
   <Categories>
     <Category>Fields</Category>

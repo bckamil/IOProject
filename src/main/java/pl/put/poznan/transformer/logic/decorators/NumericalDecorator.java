@@ -3,6 +3,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import pl.put.poznan.transformer.logic.AbstractInput;
 
+/**
+ * NumericalDecorator
+ * It taks any object that inherit from AbstractInput class
+ * and modify its previous method getText() to transform numbers in text
+ * into words in Polish
+ *
+ * @author Krystian
+ * @see pl.put.poznan.transformer.logic.decorators.AbstractDecorator
+ */
 public class NumericalDecorator extends AbstractDecorator{
 
     private String[] tab1 = {"sto","dwieście","trzysta","czterysta","pięćset","sześćset","siedemset","osiemset",
@@ -14,9 +23,21 @@ public class NumericalDecorator extends AbstractDecorator{
     private String[] tab4 = {"zero","jeden","dwa","trzy","cztery","pięć","sześć","siedem","osiem","dziewięć"};
     private String[] tab5 = {"jedna","dwie"};
 
+    /**
+     * Constructor of inverseDecorator
+     * It takes any object that inherit from AbstractInput class
+     * and modify its previous method getText()
+     * @param inputText
+     */
     public NumericalDecorator(AbstractInput inputText) {
         super(inputText);
     }
+
+    /**
+     * Override getText() method
+     *
+     * @return Return text with numbers converted to words
+     */
     public String getText()
     {
         String workString = inputText.getText();
