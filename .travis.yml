@@ -1,3 +1,4 @@
 language: Java
 script: mvn package
-mvn deploy -Dregistry=https://maven.pkg.github.com/bckamil
+after_success:
+  mvn deploy -Dregistry=https://maven.pkg.github.com/bckamil
