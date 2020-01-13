@@ -15,8 +15,9 @@ import java.util.Arrays;
  * @author marek
  *
  */
-@RestController
 //@RequestMapping("/common/{text}")
+@RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TextTransformerController {
 
     private static final Logger logger = LoggerFactory.getLogger(TextTransformerController.class);
