@@ -14,14 +14,8 @@ public class TextTransformerMockTest{
     @Test
     public void mockTest() {
         TextTransformer mockObject = mock(TextTransformer.class);
-        when(mockObject.inverseTransform()).thenReturn("Alo");
-        assertEquals("Inverse base test", "Alo",mockObject.inverseTransform());
+        assertEquals("Inverse base test", null,mockObject.inverseTransform());
     }
-    @Test
-    public void mockTest2() {
-        TextTransformer mockObject = mock(TextTransformer.class);
-        when(mockObject.inverseTransform()).thenReturn("Alo");
-        assertEquals("Inverse base test", "Alo",mockObject.inverseTransform());
-    }
+
 
 }

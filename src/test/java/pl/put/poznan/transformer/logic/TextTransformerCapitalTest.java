@@ -2,6 +2,10 @@ package pl.put.poznan.transformer.logic;
 import org.junit.Test;
 import junit.framework.TestCase;
 
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 public class TextTransformerCapitalTest extends TestCase {
     @Test
     public void test() {
@@ -26,6 +30,12 @@ public class TextTransformerCapitalTest extends TestCase {
         TextTransformer test = new TextTransformer(transform,"ala ma kota");
         test.transform();
         assertEquals("Ala Ma Kota",test.getInputText());
+    }
+    @Test
+    public void test4() {
+        TextTransformer mockObject = mock(TextTransformer.class);
+        when(mockObject.capitalTransform()).thenReturn("Alo");
+        assertEquals("Inverse base test", "Alo",mockObject.capitalTransform());
     }
 
 }
