@@ -37,8 +37,8 @@
          
     <distributionManagement>
 	<site>
-             <id>github-project-site</id>
-	    <name>GitHub Project Pages</name>
+             <id>github</id>
+	    <name>GitHub bckamil Apache Maven Packages</name>
 	    <url>gitsite:git@github.com/bckamil/IOProject.git</url>
 	</site>
      </distributionManagement>
